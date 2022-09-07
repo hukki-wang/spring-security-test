@@ -12,7 +12,7 @@ public class TestBCrypt {
     @Test
     public void test1(){
         //对原始密码加密
-        String hashpw = BCrypt.hashpw("123",BCrypt.gensalt());
+        String hashpw = BCrypt.hashpw("secret",BCrypt.gensalt());
         System.out.println(hashpw);
         //校验原始密码和BCrypt密码是否一致
         boolean checkpw = BCrypt.checkpw("123",
